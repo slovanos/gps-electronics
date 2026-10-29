@@ -1,0 +1,58 @@
+# Hidden files excluding .gitignore
+.*
+!.gitignore
+
+# Compiled Python files
+__pycache__/
+*.pyc
+
+# My local files
+my_*
+local_*
+
+# Virtual Environment
+myvenv/
+venv/
+.myvenv/
+.venv/
+
+# Env variables file (for dotenv for example)
+.env
+
+# My test files
+test*.py
+
+# Deploy, bin folders
+deploy/
+build/
+bin/
+
+# My data folders:
+local/
+test/
+
+# Hugo
+/public/
+/resources/_gen/
+.hugo_build.lock
+.DS_Store
+
+# IDE
+.vscode/
+
+# mypy and pytest
+.mypy_cache/
+.pytest_cache/
+
+# Compressed
+*.tar
+*.gz
+*.7z
+*.zip
+
+# Python egg metadata, regenerated from source files by setuptools.
+*.egg-info
+
+# Other
+todo.txt
+to-do.txt
