@@ -1,18 +1,20 @@
 {{ define "main" }}
 <section id="lead" class="lead"{{ with .Params.image }} style="{{ printf "--lead-bg: url('%s')" (printf "images/%s" . | relURL) | safeCSS }}"{{ end }}>
-  <div class="lead-content">
+  <div class="lead-content{{ with .Params.logo }} has-logo{{ end }}">
     {{- with .Params.logo }}
-    <h1 class="lead-logo"><img src="{{ printf "images/%s" . | relURL }}" alt="{{ $.Title }}" width="451" height="447"></h1>
-    {{- else }}
-    <h1>{{ .Title }}</h1>
+    {{- /* decorative: the title next to it says the same */}}
+    <div class="lead-logo"><img src="{{ printf "images/%s" . | relURL }}" alt="" width="451" height="447"></div>
     {{- end }}
-    {{- with .Params.subtitle }}
-    <p class="lead-subtitle">{{ . }}</p>
-    {{- end }}
-    <div class="lead-text">{{ .Content }}</div>
-    {{- with .Params.button }}
-    <p><a class="button" href="#contacto">{{ . }}</a></p>
-    {{- end }}
+    <div class="lead-main">
+      <h1>{{ .Title }}</h1>
+      {{- with .Params.subtitle }}
+      <p class="lead-subtitle">{{ . }}</p>
+      {{- end }}
+      <div class="lead-text">{{ .Content }}</div>
+      {{- with .Params.button }}
+      <p><a class="button" href="#contacto">{{ . }}</a></p>
+      {{- end }}
+    </div>
   </div>
   <a class="lead-down" href="#servicios" aria-label="{{ T "scroll_down" }}">
     <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
