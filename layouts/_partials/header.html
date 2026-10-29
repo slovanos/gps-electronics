@@ -1,6 +1,6 @@
 {{- $home := site.Home.RelPermalink -}}
 <header class="site-header">
-  <a class="brand" href="{{ $home }}">{{ site.Title }}</a>
+  <a class="brand" href="{{ $home }}"><img src="{{ "images/logo-mark.svg" | relURL }}" alt="" width="40" height="40"> {{ site.Title }}</a>
   <nav class="site-nav" aria-label="{{ T "nav_main" }}">
     <ul>
       <li><a href="{{ $home }}#servicios">{{ T "nav_services" }}</a></li>
