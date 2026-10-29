@@ -1,7 +1,11 @@
 {{ define "main" }}
 <section id="lead" class="lead"{{ with .Params.image }} style="{{ printf "--lead-bg: url('%s')" (printf "images/%s" . | relURL) | safeCSS }}"{{ end }}>
   <div class="lead-content">
+    {{- with .Params.logo }}
+    <h1 class="lead-logo"><img src="{{ printf "images/%s" . | relURL }}" alt="{{ $.Title }}" width="451" height="447"></h1>
+    {{- else }}
     <h1>{{ .Title }}</h1>
+    {{- end }}
     {{- with .Params.subtitle }}
     <p class="lead-subtitle">{{ . }}</p>
     {{- end }}

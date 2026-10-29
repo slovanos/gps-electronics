@@ -5,5 +5,7 @@ description: "Desarrollamos equipos electrónicos a medida, con su firmware, su 
 button: "Contanos tu proyecto"
 # Background photo of the top block, from static/images/
 image: lead-bg.jpg
+# Logo shown instead of the title text, from static/images/ (remove to show the title)
+logo: logo-full.jpg
 ---
 Desarrollamos equipos electrónicos a medida, con su firmware, su comunicación y el software e inteligencia artificial que los hacen útiles.

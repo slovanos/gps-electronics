@@ -121,6 +121,9 @@ p { margin: 0 0 1em; }
 }
 .lead-content { max-width: 46rem; }
 .lead h1 { color: inherit; font-weight: 900; font-size: clamp(2.6rem, 9vw, 5rem); letter-spacing: 0.01em; }
+/* The logo JPG has a white background, so it sits on a white panel */
+.lead-logo { display: inline-block; margin-bottom: 0.5rem; padding: 0.75rem; background: #ffffff; border-radius: 12px; }
+.lead-logo img { width: clamp(11rem, 40vw, 16rem); height: auto; }
 .lead-subtitle { margin: 0.75rem 0 1.5rem; font-weight: 300; font-size: clamp(1.2rem, 3.5vw, 1.6rem); }
 .lead-text { color: var(--on-navy-soft); font-size: 1.15rem; }
 .lead :focus-visible { outline-color: var(--on-navy); }
