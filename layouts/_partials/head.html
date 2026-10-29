@@ -1,5 +1,5 @@
 {{- $desc := site.Home.Params.description -}}
-{{- $title := cond .IsHome site.Title (printf "%s – %s" .Title site.Title) -}}
+{{- $title := cond .IsHome site.Title (printf "%s – %s" (cond (eq .Kind "404") (T "not_found_title") .Title) site.Title) -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add("js")</script>
