@@ -1,3 +1,6 @@
+{{- $mail := split site.Params.email "@" -}}
 <footer class="site-footer">
   <p>© {{ now.Year }} {{ site.Title }}</p>
+  <p><a class="contact-mail" data-user="{{ index $mail 0 }}" data-domain="{{ index $mail 1 }}"></a></p>
+  <p><a href="#main">{{ T "back_to_top" }}</a></p>
 </footer>

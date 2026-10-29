@@ -1,13 +1,18 @@
 {{ define "main" }}
-<section id="lead" class="lead">
-  <h1>{{ .Title }}</h1>
-  {{- with .Params.subtitle }}
-  <p class="lead-subtitle">{{ . }}</p>
-  {{- end }}
-  {{ .Content }}
-  {{- with .Params.button }}
-  <p><a class="button" href="#contacto">{{ . }}</a></p>
-  {{- end }}
+<section id="lead" class="lead"{{ with .Params.image }} style="{{ printf "--lead-bg: url('%s')" (printf "images/%s" . | relURL) | safeCSS }}"{{ end }}>
+  <div class="lead-content">
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.subtitle }}
+    <p class="lead-subtitle">{{ . }}</p>
+    {{- end }}
+    <div class="lead-text">{{ .Content }}</div>
+    {{- with .Params.button }}
+    <p><a class="button" href="#contacto">{{ . }}</a></p>
+    {{- end }}
+  </div>
+  <a class="lead-down" href="#servicios" aria-label="{{ T "scroll_down" }}">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
 </section>
 
 {{- /* One section per folder in content/es; each file in it is one item, ordered by weight */}}
@@ -15,23 +20,32 @@
 {{- with site.GetPage . }}
 {{- $sec := . }}
 <section id="{{ .Section }}" class="block block-{{ .Section }}">
-  <h2>{{ .Title }}</h2>
-  {{- with .Params.image }}
-  <img src="{{ printf "images/%s" . | relURL }}" alt="{{ $sec.Params.image_alt }}" loading="lazy">
-  {{- end }}
-  {{ .Content }}
-  {{- range .Pages.ByWeight }}
-  {{- $item := . }}
-  <article class="item">
-    {{- with .Params.image }}
-    <img src="{{ printf "images/%s" . | relURL }}" alt="{{ $item.Params.image_alt }}" loading="lazy">
-    {{- end }}
-    <div class="item-text">
-      <h3>{{ .Title }}</h3>
-      {{ .Content }}
+  <div class="container">
+    <h2>{{ .Title }}</h2>
+    <div class="block-intro">
+      {{- with .Params.image }}
+      <img src="{{ printf "images/%s" . | relURL }}" alt="{{ $sec.Params.image_alt }}" loading="lazy">
+      {{- end }}
+      <div class="prose">{{ .Content }}</div>
     </div>
-  </article>
-  {{- end }}
+    <div class="items">
+      {{- range .Pages.ByWeight }}
+      {{- $item := . }}
+      <article class="item">
+        {{- with .Params.image }}
+        <img src="{{ printf "images/%s" . | relURL }}" alt="{{ $item.Params.image_alt }}" loading="lazy">
+        {{- end }}
+        <div class="item-text">
+          <h3>{{ .Title }}</h3>
+          {{- with .Params.role }}
+          <p class="item-role">{{ . }}</p>
+          {{- end }}
+          <div class="prose">{{ .Content }}</div>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
 </section>
 {{- end }}
 {{- end }}
@@ -39,10 +53,14 @@
 {{- with site.GetPage "/contacto" }}
 {{- $mail := split site.Params.email "@" }}
 <section id="contacto" class="block block-contacto">
-  <h2>{{ .Title }}</h2>
-  {{ .Content }}
-  <p><a class="contact-mail" data-user="{{ index $mail 0 }}" data-domain="{{ index $mail 1 }}"></a></p>
-  <noscript><p>{{ index $mail 0 }} [arroba] {{ replace (index $mail 1) "." " [punto] " }}</p></noscript>
+  <div class="container">
+    <h2>{{ .Title }}</h2>
+    <div class="prose">{{ .Content }}</div>
+    <p class="contact-direct">
+      <a class="contact-mail" data-user="{{ index $mail 0 }}" data-domain="{{ index $mail 1 }}"></a>
+      <noscript>{{ index $mail 0 }} [arroba] {{ replace (index $mail 1) "." " [punto] " }}</noscript>
+    </p>
+  </div>
 </section>
 {{- end }}
 {{ end }}

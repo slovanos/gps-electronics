@@ -1,7 +1,11 @@
 {{- $home := site.Home.RelPermalink -}}
 <header class="site-header">
   <a class="brand" href="{{ $home }}"><img src="{{ "images/logo-mark.svg" | relURL }}" alt="" width="40" height="40"> {{ site.Title }}</a>
-  <nav class="site-nav" aria-label="{{ T "nav_main" }}">
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <span class="visually-hidden">{{ T "menu" }}</span>
+  </button>
+  <nav class="site-nav" id="site-nav" aria-label="{{ T "nav_main" }}">
     <ul>
       <li><a href="{{ $home }}#servicios">{{ T "nav_services" }}</a></li>
       <li><a href="{{ $home }}#proyectos">{{ T "nav_projects" }}</a></li>
