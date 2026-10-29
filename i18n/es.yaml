@@ -1,0 +1,10 @@
+# Interface strings. Values must never be empty.
+skip_to_content: "Ir al contenido"
+nav_main: "Menú principal"
+nav_services: "Servicios"
+nav_projects: "Proyectos"
+nav_about: "Nosotros"
+nav_contact: "Contacto"
+not_found_title: "Página no encontrada"
+not_found_text: "La dirección que buscás no existe o cambió."
+back_home: "Volver al inicio"

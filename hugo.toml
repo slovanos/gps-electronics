@@ -1,0 +1,35 @@
+# GPS Electronics — Hugo configuration
+# Docs: https://gohugo.io/configuration/
+
+baseURL = "https://gpselectronics.ar/"
+title = "GPS Electronics"
+timeZone = "America/Argentina/Buenos_Aires"
+enableRobotsTXT = true
+cleanDestinationDir = true   # remove stale files from public/ on every build
+disableKinds = ["taxonomy", "term", "rss"]
+
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = false   # Spanish at /, English later at /en/
+
+[languages]
+  [languages.es]
+    weight = 1
+    label = "Español"
+    locale = "es-AR"
+
+# ---------------------------------------------------------------------------
+# Content layout
+#   content/es   -> Spanish texts, one Markdown file per block of the home page
+#   content/en   -> English later, same tree, plus a mount like the one below
+# ---------------------------------------------------------------------------
+[[module.mounts]]
+  source = "content/es"
+  target = "content"
+  [module.mounts.sites.matrix]
+    languages = ["es"]
+
+[params]
+  # true keeps every page out of search engines (preview).
+  noindex = true
+  # Shown on the page assembled by JS (anti-spam).
+  email = "info@gpselectronics.ar"

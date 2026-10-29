@@ -1,0 +1,14 @@
+{{- $desc := site.Home.Params.description -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- if site.Params.noindex }}
+<meta name="robots" content="noindex">
+{{- end }}
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} – {{ site.Title }}{{ end }}</title>
+{{- with $desc }}
+<meta name="description" content="{{ . | plainify }}">
+{{- end }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ with resources.Get "css/main.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- end }}

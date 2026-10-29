@@ -1,6 +1,7 @@
 # Hidden files excluding .gitignore
 .*
 !.gitignore
+!.github/
 
 # Compiled Python files
 __pycache__/

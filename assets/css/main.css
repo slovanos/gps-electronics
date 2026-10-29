@@ -1,0 +1,10 @@
+/* GPS Electronics — site styles. Full design in Phase 2. */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
