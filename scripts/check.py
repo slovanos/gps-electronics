@@ -3,7 +3,7 @@
 
 1. Builds the site with Hugo and fails on any WARN or ERROR.
 2. Confirms the expected pages exist, and that the content blocks
-   (servicios/, proyectos/, nosotros/, contacto) did not become pages.
+   (servicios/, productos/, nosotros/, contacto) did not become pages.
 3. Checks that every internal link (href, src, CSS url()) resolves to a file
    in the build, with the site served from a subpath like /gps-electronics/.
 
@@ -22,7 +22,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 # Subpath build, to catch root-absolute links.
 BASE = "http://localhost/gps-electronics/"
 PAGES = ["index.html", "404.html", "sitemap.xml", "robots.txt"]
-BLOCKS = ["servicios", "proyectos", "nosotros", "contacto"]
+BLOCKS = ["servicios", "productos", "nosotros", "contacto"]
 problems = []
 
 

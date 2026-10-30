@@ -1,5 +1,5 @@
 ---
-title: "Proyectos"
+title: "Productos"
 # Shown on the home page only; neither this folder nor its files become pages.
 build:
   render: never
@@ -8,4 +8,4 @@ cascade:
     render: never
     list: local
 ---
-Algunos equipos que diseñamos y pusimos a funcionar.
+Equipos propios, desarrollados y probados en campo.

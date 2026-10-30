@@ -175,13 +175,13 @@ p { margin: 0 0 1em; }
 .block-servicios .item { border-top: 3px solid var(--accent); padding-top: 1.25rem; }
 
 /* Proyectos: photo beside text, alternating sides */
-.block-proyectos { background: var(--paper-alt); }
-.block-proyectos .items { display: grid; gap: clamp(3rem, 7vw, 5rem); }
-.block-proyectos .item img { max-height: 28rem; width: auto; margin: 0 auto 1.25rem; }
+.block-productos { background: var(--paper-alt); }
+.block-productos .items { display: grid; gap: clamp(3rem, 7vw, 5rem); }
+.block-productos .item img { max-height: 28rem; width: auto; margin: 0 auto 1.25rem; }
 @media (min-width: 48rem) {
-  .block-proyectos .item { display: grid; grid-template-columns: 5fr 6fr; gap: 3rem; align-items: center; }
-  .block-proyectos .item img { margin-bottom: 0; }
-  .block-proyectos .item:nth-child(even) img { order: 2; }
+  .block-productos .item { display: grid; grid-template-columns: 5fr 6fr; gap: 3rem; align-items: center; }
+  .block-productos .item img { margin-bottom: 0; }
+  .block-productos .item:nth-child(even) img { order: 2; }
 }
 
 /* Nosotros: group photo beside the intro, then one column per person */

@@ -22,7 +22,7 @@
 </section>
 
 {{- /* One section per folder in content/es; each file in it is one item, ordered by weight */}}
-{{- range slice "servicios" "proyectos" "nosotros" }}
+{{- range slice "servicios" "productos" "nosotros" }}
 {{- with site.GetPage . }}
 {{- $sec := . }}
 <section id="{{ .Section }}" class="block block-{{ .Section }}">
