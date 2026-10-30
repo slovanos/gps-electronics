@@ -2,7 +2,7 @@
 title: "IO Extender 104: entradas y salidas a distancia por LoRa"
 weight: 2
 # Photo from static/images/
-image: io-extender.jpg
+image: io-extender.webp
 image_alt: "IO Extender 104 abierto, con la electrónica y el logo de GPS Electronics"
 ---
 Dos equipos, maestro y esclavo, replican entradas y salidas digitales a distancia por radio LoRa, sin tender cables.
