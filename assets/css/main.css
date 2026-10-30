@@ -13,16 +13,16 @@
 /* Tokens: change colours here only. Text pairs are WCAG AA (4.5:1) or better. */
 :root {
   --paper: #ffffff;         /* background */
-  --paper-alt: #f1f5f8;     /* alternate section background */
-  --line: #d8e1e8;
-  --ink: #1d2833;           /* text */
-  --ink-soft: #4a5560;      /* secondary text */
-  --heading: #143a5c;       /* logo navy */
-  --accent: #2a6a95;        /* links (logo blue, darkened for contrast) */
-  --copper: #c98a4b;        /* decoration only: fails contrast as text on white */
-  --navy: #143a5c;          /* hero overlay base, footer, button text */
-  --on-navy: #ffffff;
-  --on-navy-soft: #d3e0eb;
+  --paper-alt: #f0f6f1;     /* alternate section background */
+  --line: #d4e3d8;
+  --ink: #1b2a21;           /* text */
+  --ink-soft: #4a5a50;      /* secondary text */
+  --heading: #10412a;       /* logo dark green */
+  --accent: #23704a;        /* links (logo green, darkened for contrast) */
+  --light-green: #86b783;   /* decoration only: fails contrast as text on white */
+  --brand: #10412a;         /* hero overlay base, footer, button text */
+  --on-brand: #ffffff;
+  --on-brand-soft: #d3e6d8;
   --header-h: 4rem;
   --font: "Lato", system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light dark;
@@ -30,13 +30,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #0e1821;
-    --paper-alt: #15232f;
-    --line: #2a3a48;
-    --ink: #e3eaf0;
-    --ink-soft: #a7b4bf;
-    --heading: #b5d3ea;
-    --accent: #7fb6de;
+    --paper: #0c1912;
+    --paper-alt: #13241a;
+    --line: #2a3d31;
+    --ink: #e3ede6;
+    --ink-soft: #a8baae;
+    --heading: #b8dcc3;
+    --accent: #86c79a;
   }
 }
 
@@ -84,8 +84,8 @@ p { margin: 0 0 1em; }
 }
 .brand img { width: 2.5rem; height: 2.5rem; }
 @media (prefers-color-scheme: dark) {
-  /* the navy chip disappears on a dark header */
-  .brand img { background: #e3eaf0; border-radius: 6px; padding: 2px; }
+  /* the dark green chip disappears on a dark header */
+  .brand img { background: #e3ede6; border-radius: 6px; padding: 2px; }
 }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 0; padding: 0; list-style: none; }
 .site-nav a { color: var(--ink); font-weight: 700; text-decoration: none; padding: 0.5rem 0; display: block; }
@@ -113,11 +113,11 @@ p { margin: 0 0 1em; }
   min-height: calc(100svh - var(--header-h));
   padding: 4rem 1.25rem 6rem;
   text-align: center;
-  color: var(--on-navy);
+  color: var(--on-brand);
   background:
-    linear-gradient(rgb(11 34 56 / 0.7), rgb(11 34 56 / 0.7)),
+    linear-gradient(rgb(8 36 22 / 0.7), rgb(8 36 22 / 0.7)),
     var(--lead-bg, none) center / cover no-repeat,
-    var(--navy);
+    var(--brand);
 }
 .lead-content { max-width: 46rem; }
 .lead h1 { color: inherit; font-weight: 900; font-size: clamp(2.6rem, 9vw, 5rem); letter-spacing: 0.01em; }
@@ -132,19 +132,19 @@ p { margin: 0 0 1em; }
   .has-logo h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
 }
 .lead-subtitle { margin: 0.75rem 0 1.5rem; font-weight: 300; font-size: clamp(1.2rem, 3.5vw, 1.6rem); }
-.lead-text { color: var(--on-navy-soft); font-size: 1.15rem; }
-.lead :focus-visible { outline-color: var(--on-navy); }
+.lead-text { color: var(--on-brand-soft); font-size: 1.15rem; }
+.lead :focus-visible { outline-color: var(--on-brand); }
 .button {
   display: inline-block; margin-top: 0.5rem;
   padding: 0.85rem 1.75rem;
-  background: var(--on-navy); color: var(--navy);
+  background: var(--on-brand); color: var(--brand);
   font-weight: 700; font-size: 1.1rem; text-decoration: none;
   border-radius: 6px;
 }
-.button:hover { background: #f4e6d6; }
+.button:hover { background: #e1f0e4; }
 .lead-down {
   position: absolute; bottom: 1.5rem; left: 50%; translate: -50% 0;
-  color: var(--on-navy); padding: 0.5rem;
+  color: var(--on-brand); padding: 0.5rem;
 }
 @media (prefers-reduced-motion: no-preference) {
   .lead-down svg { animation: bob 2.4s ease-in-out infinite; }
@@ -154,18 +154,18 @@ p { margin: 0 0 1em; }
 /* Sections ------------------------------------------------------------------ */
 .block { padding: clamp(3.5rem, 8vw, 6rem) 0; scroll-margin-top: var(--header-h); }
 .block h2 { font-weight: 900; font-size: clamp(1.9rem, 4.5vw, 2.5rem); margin-bottom: 1.75rem; }
-/* A short circuit trace under each section title, ending in a copper pad */
+/* A short circuit trace under each section title, ending in a light green pad */
 .block h2::after {
   content: ""; display: block; width: 4.5rem; height: 10px; margin-top: 0.7rem;
   background:
-    radial-gradient(circle at calc(100% - 5px) 50%, transparent 2px, var(--copper) 2.5px 4px, transparent 4.5px),
+    radial-gradient(circle at calc(100% - 5px) 50%, transparent 2px, var(--light-green) 2.5px 4px, transparent 4.5px),
     linear-gradient(var(--accent), var(--accent)) left center / calc(100% - 9px) 3px no-repeat;
 }
 .prose { max-width: 42rem; }
 .prose > :last-child { margin-bottom: 0; }
 .prose ul { padding-left: 1.2rem; margin: 0 0 1em; }
 .prose li { margin-bottom: 0.35em; }
-.prose li::marker { color: var(--copper); }
+.prose li::marker { color: var(--light-green); }
 .block-intro { margin-bottom: 2.5rem; font-size: 1.15rem; }
 .item h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
 .item img { border-radius: 6px; }
@@ -203,12 +203,12 @@ p { margin: 0 0 1em; }
 .site-footer {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem;
   padding: 2rem 1.25rem;
-  background: var(--navy); color: var(--on-navy-soft);
+  background: var(--brand); color: var(--on-brand-soft);
   font-size: 0.95rem;
 }
 .site-footer p { margin: 0; }
-.site-footer a { color: var(--on-navy); }
-.site-footer :focus-visible { outline-color: var(--on-navy); }
+.site-footer a { color: var(--on-brand); }
+.site-footer :focus-visible { outline-color: var(--on-brand); }
 
 /* 404 ----------------------------------------------------------------------- */
 .page { max-width: 42rem; margin: 0 auto; padding: 5rem 1.25rem; }
