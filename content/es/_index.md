@@ -2,7 +2,7 @@
 title: "GPS Electronics"
 subtitle: "Ingeniería aplicada. Electrónica, comunicación, software e inteligencia artificial. Soluciones para el campo y la industria."
 description: "Ingeniería. Soluciones para el campo y la industria"
-button: "Contanos tu proyecto"
+button: "Contactanos"
 # Background photo of the top block, from static/images/
 image: lead-bg.jpg
 # Logo shown instead of the title text, from static/images/ (remove to show the title)
