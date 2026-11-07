@@ -1,6 +1,6 @@
 ---
 title: "GPS Electronics"
-subtitle: "Ingeniería. Soluciones para el campo y la industria. Electrónica, comunicación, software e inteligencia artificial."
+subtitle: "Ingeniería, Electrónica, comunicación, software e inteligencia artificial. Soluciones para el campo y la industria."
 description: "Ingeniería. Soluciones para el campo y la industria"
 button: "Contanos tu proyecto"
 # Background photo of the top block, from static/images/
