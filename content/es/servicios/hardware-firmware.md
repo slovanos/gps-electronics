@@ -1,5 +1,5 @@
 ---
-title: "Desarrollo de equipos a medida"
+title: "Equipos Electrónicos"
 weight: 1
 ---
-Electrónica basada en microcontroladores y circuitos integrados, firmware y prototipos listos para probar en campo.
+Electrónica basada en microcontroladores utilizando tecnologías de última generación. Desarrollo integral de firmware y software.
