@@ -8,4 +8,3 @@ cascade:
     render: never
     list: local
 ---
-Equipos propios, desarrollados y probados en campo.

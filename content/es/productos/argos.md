@@ -1,10 +1,10 @@
 ---
-title: "Argos 1000: vigilancia remota de variables en el campo"
+title: "Argos 1000: Vigilancia Remota"
 weight: 1
 # Photo from static/images/
 image: argos.webp
 image_alt: "Equipo Argos 1000 con el logo de GPS Electronics"
 ---
-Equipo autónomo de monitoreo remoto para variables analógicas: tensión de un alambrado eléctrico, temperatura en silos de granos, niveles de agua, tensiones y más, con distintos sensores. Reporta por SMS a través de la red GSM: informa el estado cuando se lo consulta y envía una alarma cuando un valor supera los umbrales configurados.
+Equipo autónomo de monitoreo remoto para variables analógicas: tensión de alambrado eléctrico, temperatura en silos de granos, niveles de agua y más, utilizando variedad de sensores. Reporta por SMS a través de la red GSM: informa el estado, envía alarmas, y permite consultas y configuración remota.
 
-Hoy vigila alambrados eléctricos en el campo.
+Implementación actual: monitoreo de alambrados eléctricos en el campo.
