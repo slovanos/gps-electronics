@@ -11,4 +11,4 @@ cascade:
 image: nosotros.jpg
 image_alt: "Eduardo y Joaquín junto a un equipo en desarrollo"
 ---
-Somos dos ingenieros electrónicos graduados en la Universidad Nacional de Rosario. Entre ambos contamos con más de treinta años de experiencia en la industria, durante los cuales desarrollamos e implementamos electrónica, software e inteligencia artificial.
+Somos dos ingenieros electrónicos graduados en la Universidad Nacional de Rosario. Entre ambos sumamos más de treinta años de experiencia, durante los cuales desarrollamos e implementamos equipamiento electrónico, software y herramientas de inteligencia artificial.
